@@ -17,12 +17,49 @@ boost_color = "white"
 pointx = 0
 pointy = 0
 
+ospeed = 100
+osize = 10
 oposx = 61
 oposy = 81
-osize = 10
-ospeedx = 100
-ospeedy = 100
+odirectionx = 1
+odirectiony = 1
+oposx2 = 2000
+oposy2 = 2000
+odirectionx2 = 0
+odirectiony2 = 0
+oposx3 = 2000
+oposy3 = 2000
+odirectionx3 = 0
+oposx4 = 2000
+oposy4 = 2000
+odirectiony4 = 0
 ocolor = pygame.Color(60, 163, 23, 255)
+ocolor2 = pygame.Color(47, 45, 59, 255)
+ocolor3 = pygame.Color(47, 45, 59, 255)
+ocolor4 = pygame.Color(47, 45, 59, 255)
+
+key5 = True
+key10 = True
+key15 = True
+key20 = True
+pretres = False
+key25 = True
+tres = False
+key30 = True
+key35 = True
+key40 = True
+key45 = True
+presecondo = False
+key50 = True
+secondo = False
+key60 = True
+key70 = True
+prequad = False
+key75 = True
+quad = False
+key80 = True
+key90 = True
+key100 = True
 
 score = 0
 changing = True
@@ -55,56 +92,182 @@ while running:
     pygame.draw.circle(screen, "yellow", (pointx, pointy), 5)
 
     pygame.draw.circle(screen, ocolor, (oposx, oposy), osize)
-    if 60 < oposx < 1240 and 80 < oposy < 690:
-        oposx += ospeedx * dt
-        oposy += ospeedy * dt
+    oposx += odirectionx * ospeed * dt
+    oposy += odirectiony * ospeed * dt
+
+    pygame.draw.circle(screen, ocolor2, (oposx2, oposy2), osize)
+    oposx2 += odirectionx2 * ospeed * dt
+    oposy2 += odirectiony2 * ospeed * dt
+
+    pygame.draw.circle(screen, ocolor3, (oposx3, oposy3), osize)
+    oposx3 += odirectionx3 * ospeed * dt
+
+    pygame.draw.circle(screen, ocolor4, (oposx4, oposy4), osize)
+    oposy4 += odirectiony4 * ospeed * dt
+
+    if oposx > 1239:
+        odirectionx = -1
+    if oposx < 61:
+        odirectionx = 1
+    if oposy > 689:
+        odirectiony = -1
+    if oposy < 81:
+        odirectiony = 1
+
+
+    if presecondo:
+        if oposx2 > 1239:
+            odirectionx2 = -1
+        if oposx2 < 61:
+            odirectionx2 = 1
+        if oposy2 > 689:
+            odirectiony2 = -1
+        if oposy2 < 81:
+            odirectiony2 = 1
+    if pretres:
+        if oposx3 > 1239:
+            odirectionx3 = -1
+        if oposx3 < 61:
+            odirectionx3 = 1
+
+    if prequad:
+        if oposy4 > 689:
+            odirectiony4 = -1
+        if oposy4 < 81:
+            odirectiony4 = 1
 
     if changing:
         pointx = 100 + (random() * 1100)
         pointy = 130 + (random() * 520)
         changing = False
 
-    if player_pos.x > pointx - 20  and player_pos.x < pointx + 20:
-        if player_pos.y > pointy - 20 and player_pos.y < pointy + 20:
+    if pointx - 30 < player_pos.x < pointx + 30:
+        if pointy - 30 < player_pos.y < pointy + 30:
             score += 1
             changing = True
+    
+    if oposx - osize < player_pos.x < oposx + osize:
+        if oposy - osize < player_pos.y < oposy + osize:
+            running = False
 
-    if score >= 10:
+    if oposx2 - osize < player_pos.x < oposx2 + osize and secondo:
+        if oposy2 - osize < player_pos.y < oposy2 + osize:
+            running = False
+
+    if oposx3 - osize < player_pos.x < oposx3 + osize and tres:
+        if oposy3 - osize < player_pos.y < oposy3 + osize:
+            running = False
+
+    if oposx4 - osize < player_pos.x < oposx4 + osize and quad:
+        if oposy4 - osize < player_pos.y < oposy4 + osize:
+            running = False
+
+    if score == 5 and key5:
+        ospeed += 50
+        key5 = False
+    if score == 10 and key10:
         ocolor = pygame.Color(163, 163, 23)
-        oposx += ospeedx * dt
-        oposy += ospeedy * dt
-    if score >= 20:
+        ospeed += 50
+        osize += 5
+        key10 = False
+    if score == 15 and key15:
+        ospeed += 50
+        key15 = False
+    if score == 20 and key20:
         ocolor = pygame.Color(163, 114, 23)
-    if score >= 30:
+        ospeed += 50
+        osize += 5
+        oposx3 = 650
+        oposy3 = 385
+        odirectionx3 = 1
+        pretres = True
+        key20 = False
+    if score == 25 and key25:
+        tres = True
+        ocolor3 = pygame.Color(163, 114, 23)
+        key25 = False
+    if score == 30 and key30:
         ocolor = pygame.Color(163, 39, 23)
-    if score >= 40:
+        ospeed += 50
+        osize += 5
+        ocolor3 = pygame.Color(163, 39, 23)
+        key30 = False
+    if score == 35 and key35:
+        ospeed += 50
+        key35 = False
+    if score == 40 and key40:
         ocolor = pygame.Color(159, 23, 163)
-    if score >= 50:
+        ospeed += 50
+        osize += 5
+        ocolor3 = pygame.Color(159, 23, 163)
+        key40 = False
+    if score == 45 and key45:
+        ospeed += 50
+        odirectionx2 = -1
+        odirectiony2 = -1
+        oposy2 = 689 - oposy
+        oposx2 = 1239 - oposx
+        presecondo = True
+        key45 = False
+    if score == 50 and key50:
         ocolor = pygame.Color(51, 23, 163)
-    if score >= 100:
+        secondo = True
+        key50 = False
+        ocolor2 = pygame.Color(51, 23, 163)
+        ocolor3 = pygame.Color(51, 23, 163)
+    if score == 60 and key60:
+        ospeed += 100
+        osize += 5
+        key60 = False
+    if score == 70 and key70:
+        ospeed += 50
+        osize += 5
+        oposx4 = 650
+        oposy4 = 385
+        odirectiony4 = 1
+        prequad = True
+        key70 = False
+    if score == 75 and key75:
+        quad = True
+        ocolor4 = pygame.Color(51, 23, 163)
+        key75 = False
+    if score == 80 and key80:
+        ospeed += 100
+        osize += 5
+        key80 = False
+    if score == 90 and key90:
+        ospeed += 100
+        osize += 5
+        key90 = False
+    if score == 100 and key100:
         ocolor = pygame.Color(31, 237, 230)
-
+        ocolor2 = pygame.Color(31, 237, 230)
+        ocolor3 = pygame.Color(31, 237, 230)
+        ocolor4 = pygame.Color(31, 237, 230)
+        ospeed += 100
+        osize += 5
+        key100 = False
 
     keys = pygame.key.get_pressed()
     if keys[pygame.K_w] and player_pos.y > 85:
-        player_pos.y -= 300 * dt
+        player_pos.y -= 400 * dt
     if keys[pygame.K_s] and player_pos.y < 688:
-        player_pos.y += 300 * dt
+        player_pos.y += 400 * dt
     if keys[pygame.K_a] and player_pos.x > 64:
-        player_pos.x -= 300 * dt
+        player_pos.x -= 400 * dt
     if keys[pygame.K_d] and player_pos.x < 1238:
-        player_pos.x += 300 * dt
+        player_pos.x += 400 * dt
     if keys[pygame.K_SPACE] and boost > 0 and boost_timeout == False:
         boosting = True
         boost -= 4
         if keys[pygame.K_w] and player_pos.y > 85:
-            player_pos.y -= 450 * dt
+            player_pos.y -= 500 * dt
         if keys[pygame.K_s] and player_pos.y < 688:
-            player_pos.y += 450 * dt
+            player_pos.y += 500 * dt
         if keys[pygame.K_a] and player_pos.x > 64:
-            player_pos.x -= 450 * dt
+            player_pos.x -= 500 * dt
         if keys[pygame.K_d] and player_pos.x < 1238:
-            player_pos.x += 450 * dt 
+            player_pos.x += 500 * dt 
 
     if not boosting and boost < 100:
         boost += 1
@@ -117,5 +280,6 @@ while running:
     pygame.display.flip()
 
     dt = clock.tick(60) / 1000 # limits FPS to 60
+
 
 pygame.quit()
