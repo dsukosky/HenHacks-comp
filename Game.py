@@ -80,6 +80,125 @@ while running:
     # backround
     screen.fill("black")
 
+    #w
+    pygame.draw.line(screen, "white", (20, 30), (25, 45), 2)
+    pygame.draw.line(screen, "white", (25, 45), (30, 30), 2)
+    pygame.draw.line(screen, "white", (30, 30), (35, 45), 2)
+    pygame.draw.line(screen, "white", (35, 45), (40, 30), 2)
+
+    #a
+    pygame.draw.circle(screen, "white", (60, 39), 8)
+    pygame.draw.circle(screen, "black", (60, 39), 6)
+    pygame.draw.line(screen, "white", (67, 47), (67, 31), 2)
+
+    #s
+    pygame.draw.line(screen, "white", (80, 47), (96, 47), 2)
+    pygame.draw.line(screen, "white", (96, 39), (96, 47), 2)
+    pygame.draw.line(screen, "white", (80, 39), (96, 39), 2)
+    pygame.draw.line(screen, "white", (80, 31), (80, 39), 2)
+    pygame.draw.line(screen, "white", (80, 31), (96, 31), 2)
+
+    #d
+    pygame.draw.line(screen, "white", (116, 31), (116, 47), 2)
+    pygame.draw.line(screen, "white", (116, 31), (124, 39), 2)
+    pygame.draw.line(screen, "white", (116, 47), (124, 39), 2)
+
+    #space
+    pygame.draw.line(screen, "white", (164, 47), (180, 47), 2)
+    pygame.draw.line(screen, "white", (180, 39), (180, 47), 2)
+    pygame.draw.line(screen, "white", (164, 39), (180, 39), 2)
+    pygame.draw.line(screen, "white", (164, 31), (164, 39), 2)
+    pygame.draw.line(screen, "white", (164, 31), (180, 31), 2)
+
+    pygame.draw.line(screen, "white", (200, 31), (200, 47), 2)
+    pygame.draw.line(screen, "white", (200, 31), (208, 31), 2)
+    pygame.draw.line(screen, "white", (200, 39), (208, 39), 2)
+    pygame.draw.line(screen, "white", (208, 31), (208, 39), 2)
+
+    pygame.draw.circle(screen, "white", (228, 39), 8)
+    pygame.draw.circle(screen, "black", (228, 39), 6)
+    pygame.draw.line(screen, "white", (235, 47), (235, 31), 2)
+
+    pygame.draw.line(screen, "white", (248, 47), (264, 47), 2)
+    pygame.draw.line(screen, "white", (264, 39), (264, 47), 2)
+    pygame.draw.line(screen, "white", (248, 39), (264, 39), 2)
+    pygame.draw.line(screen, "white", (248, 31), (248, 39), 2)
+    pygame.draw.line(screen, "white", (248, 31), (268, 31), 2)
+
+    pygame.draw.line(screen, "white", (288, 47), (304, 47), 2)
+    pygame.draw.line(screen, "white", (288, 39), (288, 47), 2)
+    pygame.draw.line(screen, "white", (288, 39), (304, 39), 2)
+    pygame.draw.line(screen, "white", (288, 31), (288, 39), 2)
+    pygame.draw.line(screen, "white", (288, 31), (308, 31), 2)
+
+    #to
+    pygame.draw.line(screen, "white", (336, 31), (352, 31), 2)
+    pygame.draw.line(screen, "white", (344, 31), (344, 47), 2)
+    pygame.draw.circle(screen, "white", (372, 39), 8)
+    pygame.draw.circle(screen, "black", (372, 39), 6)
+
+    #boost
+    pygame.draw.line(screen, "white", (410, 31), (410, 47), 2)
+    pygame.draw.line(screen, "white", (426, 31), (426, 47), 2)
+    pygame.draw.line(screen, "white", (410, 31), (426, 31), 2)
+    pygame.draw.line(screen, "white", (410, 39), (426, 39), 2)
+    pygame.draw.line(screen, "white", (410, 47), (426, 47), 2)
+
+    pygame.draw.circle(screen, "white", (454, 39), 8)
+    pygame.draw.circle(screen, "black", (454, 39), 6)
+    pygame.draw.circle(screen, "white", (490, 39), 8)
+    pygame.draw.circle(screen, "black", (490, 39), 6)
+
+    pygame.draw.line(screen, "white", (518, 47), (534, 47), 2)
+    pygame.draw.line(screen, "white", (534, 39), (534, 47), 2)
+    pygame.draw.line(screen, "white", (518, 39), (534, 39), 2)
+    pygame.draw.line(screen, "white", (518, 31), (518, 39), 2)
+    pygame.draw.line(screen, "white", (518, 31), (534, 31), 2)
+
+    pygame.draw.line(screen, "white", (554, 31), (570, 31), 2)
+    pygame.draw.line(screen, "white", (562, 31), (562, 47), 2)
+
+    #get
+    pygame.draw.line(screen, "white", (600, 31), (616, 31), 2)
+    pygame.draw.line(screen, "white", (600, 31), (600, 47), 2)
+    pygame.draw.line(screen, "white", (600, 39), (616, 39), 2)
+    pygame.draw.line(screen, "white", (600, 47), (616, 47), 2)
+    pygame.draw.line(screen, "white", (616, 39), (616, 47), 2)
+
+    pygame.draw.line(screen, "white", (636, 31), (652, 31), 2)
+    pygame.draw.line(screen, "white", (636, 31), (636, 47), 2)
+    pygame.draw.line(screen, "white", (636, 47), (652, 47), 2)
+    pygame.draw.line(screen, "white", (636, 39), (652, 39), 2)
+    pygame.draw.line(screen, "white", (652, 39), (652, 31), 2)
+
+    pygame.draw.line(screen, "white", (672, 31), (688, 31), 2)
+    pygame.draw.line(screen, "white", (680, 31), (680, 47), 2)
+
+    #yellow
+    pygame.draw.line(screen, "white", (710, 31), (718, 39), 2)
+    pygame.draw.line(screen, "white", (718, 39), (726, 31), 2)
+    pygame.draw.line(screen, "white", (718, 39), (718, 47), 2)
+
+    pygame.draw.line(screen, "white", (746, 31), (762, 31), 2)
+    pygame.draw.line(screen, "white", (746, 31), (746, 47), 2)
+    pygame.draw.line(screen, "white", (746, 47), (762, 47), 2)
+    pygame.draw.line(screen, "white", (746, 39), (762, 39), 2)
+    pygame.draw.line(screen, "white", (762, 39), (762, 31), 2)
+
+    pygame.draw.line(screen, "white", (782, 31), (782, 47), 2)
+    pygame.draw.line(screen, "white", (802, 31), (802, 47), 2)
+
+    pygame.draw.circle(screen, "white", (830, 39), 8)
+    pygame.draw.circle(screen, "black", (830, 39), 6)
+
+    pygame.draw.line(screen, "white", (858, 30), (863, 45), 2)
+    pygame.draw.line(screen, "white", (863, 45), (868, 30), 2)
+    pygame.draw.line(screen, "white", (868, 30), (873, 45), 2)
+    pygame.draw.line(screen, "white", (873, 45), (878, 30), 2)
+
+ 
+
+
     # player controls
     pygame.draw.circle(screen, "white", player_pos, 10)
     pygame.draw.line(screen, boost_color, (1150, 50), (1150 + boost, 50), 10)
@@ -171,20 +290,20 @@ while running:
         osize += 5
         key10 = False
     if score == 15 and key15:
+        oposx3 = 650
+        oposy3 = 385
         ospeed += 50
+        osize += 5
+        odirectionx3 = 1
+        pretres = True
         key15 = False
     if score == 20 and key20:
         ocolor = pygame.Color(163, 114, 23)
-        ospeed += 50
-        osize += 5
-        oposx3 = 650
-        oposy3 = 385
-        odirectionx3 = 1
-        pretres = True
-        key20 = False
-    if score == 25 and key25:
         tres = True
         ocolor3 = pygame.Color(163, 114, 23)
+        key20 = False
+    if score == 25 and key25:
+        ospeed += 50
         key25 = False
     if score == 30 and key30:
         ocolor = pygame.Color(163, 39, 23)
@@ -200,14 +319,16 @@ while running:
         ospeed += 50
         osize += 5
         ocolor3 = pygame.Color(159, 23, 163)
-        key40 = False
-    if score == 45 and key45:
-        ospeed += 50
         odirectionx2 = -1
         odirectiony2 = -1
         oposy2 = 689 - oposy
         oposx2 = 1239 - oposx
         presecondo = True
+        key40 = False
+    if score == 45 and key45:
+        ospeed += 50
+        secondo + True
+        ocolor2 = pygame.Color(159, 23, 163)
         key45 = False
     if score == 50 and key50:
         ocolor = pygame.Color(51, 23, 163)
@@ -216,11 +337,9 @@ while running:
         ocolor2 = pygame.Color(51, 23, 163)
         ocolor3 = pygame.Color(51, 23, 163)
     if score == 60 and key60:
-        ospeed += 100
-        osize += 5
+        ospeed += 50
         key60 = False
     if score == 70 and key70:
-        ospeed += 50
         osize += 5
         oposx4 = 650
         oposy4 = 385
@@ -232,19 +351,17 @@ while running:
         ocolor4 = pygame.Color(51, 23, 163)
         key75 = False
     if score == 80 and key80:
-        ospeed += 100
-        osize += 5
+        ospeed += 50
         key80 = False
     if score == 90 and key90:
-        ospeed += 100
-        osize += 5
+        ospeed += 50
         key90 = False
     if score == 100 and key100:
         ocolor = pygame.Color(31, 237, 230)
         ocolor2 = pygame.Color(31, 237, 230)
         ocolor3 = pygame.Color(31, 237, 230)
         ocolor4 = pygame.Color(31, 237, 230)
-        ospeed += 100
+        ospeed += 50
         osize += 5
         key100 = False
 
